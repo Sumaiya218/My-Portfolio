@@ -1,0 +1,72 @@
+@import "../../Partial/_placeholder", "../../Partial/_variables";
+
+.About{
+    color:$base_color ;
+    .Aboutus {
+        &::after{
+            @extend %sec_after;
+        }
+      &__header {
+        h2 {
+          position: relative;
+          font: {
+            weight: 800;
+            size: 56px;
+            family: "Poppins", sans-serif;
+          }
+          @media screen and (max-width:768px) {
+            font-size: 36px;            
+        }
+          span {
+            color: $main_color;
+          }
+          &::before {
+            @extend %h2-before;
+            @media screen and (max-width:1244px) {
+                display: none !important;            
+            }
+          }
+        }
+      }
+      &__items {
+      
+        li{
+            line-height: 2.8;
+            font-size: 15px;
+            span{
+                font-weight: 500;
+            }
+        }
+        h2{
+            color: $main_color;
+            font-weight: 600;
+        }
+      }
+    }
+    .skills{
+        &::after{
+            @extend %sec_after;
+        }
+        h3{
+            font-weight: 600;
+        }  
+    }
+    .Experience{
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        h3{
+            font-weight: 600;
+        } 
+        .MuiTimelineDot-defaultGrey{
+            background-color: $main_color ;
+            padding: 2px 8px;
+        }
+        span{
+            background-color: $base2_color;
+            border-radius: 25px;
+            line-height: 2;
+        }
+    }
+}

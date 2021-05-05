@@ -1,0 +1,53 @@
+@import "../../Partial/_placeholder" , "../../Partial/_variables";
+
+.contact{
+    color: $base_color;
+    &__header {
+        h2 {
+          position: relative;
+          font: {
+            weight: 800;
+            size: 56px;
+            family: "Poppins", sans-serif;
+          }
+          @media screen and (max-width:768px) {
+            font-size: 36px;            
+        }
+          span {
+            color: $main_color;
+          }
+          &::before {
+            @extend %h2-contact;
+            @media screen and (max-width:1244px) {
+                display: none !important;            
+            }
+          }
+        }
+      }
+      h4{
+          font-weight: 600;
+      }
+      p{
+          line-height: 2;
+      }
+      .icon{
+          color: $main_color;
+      }
+      a{
+          color: $base_color;
+      }
+      .icon2{
+          &:hover{
+              color: $main_color;
+          }
+      }
+      .text{
+          width: 49%;
+      }
+      .area{
+          border-color: rgb(196,196,196) !important;
+      }
+      .sendBtn{
+          background-color: $main_color !important;
+      }
+}

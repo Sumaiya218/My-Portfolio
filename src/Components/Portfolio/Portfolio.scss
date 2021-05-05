@@ -1,0 +1,53 @@
+@import "../../Partial/_variables", "../../Partial/_placeholder";
+.portfolio {
+  color: $base_color;
+  &__header {
+    h2 {
+      position: relative;
+      font: {
+        weight: 800;
+        size: 56px;
+        family: "Poppins", sans-serif;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 32px;
+      }
+      span {
+        color: $main_color;
+      }
+      &::before {
+        @extend %h2-Before;
+        @media screen and (max-width: 1244px) {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  &__items {
+    &__item {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+      &:hover{
+        .portfolio__items__item__caption{
+          opacity: 1;
+        }
+      }
+      img {
+        border-radius: 15px;
+      }
+      &__caption {
+        border-radius: 15px;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.75s;
+        a{
+          background-color: $main_color;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
