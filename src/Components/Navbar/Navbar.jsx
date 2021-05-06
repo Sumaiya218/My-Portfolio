@@ -107,136 +107,135 @@ function Navbar() {
   };
 
   return (
-    <section className="Navbar">
-      <div className={classes.root}>
-        <CssBaseline />
-        <AppBar
-          position="fixed"
-          className={clsx(classes.appBar, {
-            [classes.appBarShift]: open,
+    <div className={classes.root}>
+    <CssBaseline />
+    <AppBar
+      position="fixed"
+      className={clsx(classes.appBar, {
+        [classes.appBarShift]: open,
+      })}
+    >
+      <Toolbar>
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleDrawerOpen}
+          edge="start"
+          className={clsx(classes.menuButton, {
+            [classes.hide]: open,
           })}
         >
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              className={clsx(classes.menuButton, {
-                [classes.hide]: open,
-              })}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap>
-              Sumaiya Yahia Rashad
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          variant="permanent"
-          className={clsx(classes.drawer, {
-            [classes.drawerOpen]: open,
-            [classes.drawerClose]: !open,
-          })}
-          classes={{
-            paper: clsx({
-              [classes.drawerOpen]: open,
-              [classes.drawerClose]: !open,
-            }),
-          }}
-        >
-          <div className={classes.toolbar}>
-            <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "rtl" ? (
-                <FiChevronRight />
-              ) : (
-                <FiChevronRight />
-              )}
-            </IconButton>
-          </div>
-          <Divider />
-          <List>
-            {[
-              <Link to="/" className="text-decoration-none text-secondary">
-                HOME
-              </Link>,
-              <Link to="/about" className="text-decoration-none text-secondary">
-                ABOUT
-              </Link>,
-              <Link
-                to="/portfolio"
-                className="text-decoration-none text-secondary"
-              >
-                PORTFOLIO
-              </Link>,
-              <Link
-                to="/contact"
-                className="text-decoration-none text-secondary"
-              >
-                CONTACT
-              </Link>,
-            ].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {(() => {
-                    switch (index) {
-                      case 0:
-                        return (
-                          <Link
-                            className="text-decoration-none text-secondary"
-                            to="/"
-                          >
-                            <ImHome className="h4" />
-                          </Link>
-                        );
-                      case 1:
-                        return (
-                          <Link
-                            className="text-decoration-none text-secondary"
-                            to="/about"
-                          >
-                            <FaUserAlt className="h4" />
-                          </Link>
-                        );
-                      case 2:
-                        return (
-                          <Link
-                            className="text-decoration-none text-secondary"
-                            to="/portfolio"
-                          >
-                            <RiHandbagFill className="h4" />
-                          </Link>
-                        );
-                      case 3:
-                        return (
-                          <Link
-                            className="text-decoration-none text-secondary"
-                            to="/contact"
-                          >
-                            <MdContactMail className="h4" />
-                          </Link>
-                        );
-                    }
-                  })()}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-        </Drawer>
-        <main className={classes.content}>
-          <div className={classes.toolbar} />
-
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
-        </main>
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" noWrap>
+          Sumaiya Yahia Rashad
+        </Typography>
+      </Toolbar>
+    </AppBar>
+    <Drawer
+      variant="permanent"
+      className={clsx(classes.drawer, {
+        [classes.drawerOpen]: open,
+        [classes.drawerClose]: !open,
+      })}
+      classes={{
+        paper: clsx({
+          [classes.drawerOpen]: open,
+          [classes.drawerClose]: !open,
+        }),
+      }}
+    >
+      <div className={classes.toolbar}>
+        <IconButton onClick={handleDrawerClose}>
+          {theme.direction === "rtl" ? (
+            <FiChevronRight />
+          ) : (
+            <FiChevronRight />
+          )}
+        </IconButton>
       </div>
-    </section>
+      <Divider />
+      <List>
+        {[
+          <Link to="/" className="text-decoration-none text-secondary">
+            HOME
+          </Link>,
+          <Link to="/about" className="text-decoration-none text-secondary">
+            ABOUT
+          </Link>,
+          <Link
+            to="/portfolio"
+            className="text-decoration-none text-secondary"
+          >
+            PORTFOLIO
+          </Link>,
+          <Link
+            to="/contact"
+            className="text-decoration-none text-secondary"
+          >
+            CONTACT
+          </Link>,
+        ].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>
+              {(() => {
+                switch (index) {
+                  case 0:
+                    return (
+                      <Link
+                        className="text-decoration-none text-secondary"
+                        to="/"
+                      >
+                        <ImHome className="h4" />
+                      </Link>
+                    );
+                  case 1:
+                    return (
+                      <Link
+                        className="text-decoration-none text-secondary"
+                        to="/about"
+                      >
+                        <FaUserAlt className="h4" />
+                      </Link>
+                    );
+                  case 2:
+                    return (
+                      <Link
+                        className="text-decoration-none text-secondary"
+                        to="/portfolio"
+                      >
+                        <RiHandbagFill className="h4" />
+                      </Link>
+                    );
+                  case 3:
+                    return (
+                      <Link
+                        className="text-decoration-none text-secondary"
+                        to="/contact"
+                      >
+                        <MdContactMail className="h4" />
+                      </Link>
+                    );
+                }
+              })()}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
+    <main className={classes.content}>
+      <div className={classes.toolbar} ></div>
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </main>
+  </div>
+
   );
 }
 

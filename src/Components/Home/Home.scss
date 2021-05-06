@@ -6,11 +6,6 @@
     z-index: 999;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
   }
-  &__text{
-    @media screen and (max-width: 991px) {
-      padding: 0px;
-    }
-  }
   &__header {
     
     h1 {
@@ -20,6 +15,9 @@
         padding-left: 0px !important;
         margin-top: 0px !important;
         font-size: 36px;
+      }
+      @media screen and (max-width: 320px) {
+        font-size:20px;
       }
       font: {
         size: 42px;
@@ -33,6 +31,10 @@
         }
         @media screen and (max-width: 991px) {
           font-size: 30px;
+        }
+        @media screen and (max-width: 320px) {
+          font-size: 18px;
+          margin-top: 5px;
         }
       }
       &::before {
@@ -55,10 +57,19 @@
         padding:10px 15px !important;   
         font-size: 14px;     
       }
+      @media screen and (max-width:320px) {
+        padding:8px 8px !important;   
+        font-size: 12px;     
+      }
       &:hover{
         background-color: $main_color;
         color: #ffffff !important;
       }
+    }
+  }
+  &__text{
+    @media screen and (max-width: 991px) {
+      padding: 0px !important;
     }
   }
 }

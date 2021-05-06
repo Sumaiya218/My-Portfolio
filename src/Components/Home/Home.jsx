@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="Home">
+    <section className="Home">
       <div className="container">
         <div className="row mt-4">
-          <div className="col-md-4 col-sm-12">
+          <div className="col-md-4 col-sm-12 py-3">
             <img className="img-fluid w-100" src={img} alt="" />
           </div>
           <div className="col-md-8 col-sm-12 Home__text p-5">
             <div className="Home__header">
-              <h1 className="mt-2">
+              <h1 className="mt-5">
                 I'M SUMAIYA YAHIA.
                 <span className="d-block">FRONT-END DEVELOPER</span>
               </h1>
@@ -36,7 +36,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
