@@ -16,21 +16,21 @@ function Experience() {
         </div>
         <div className=" pt-5">
           <div className="row">
-               <div className="col-lg-6 col-md-12">
+               <div className="col-lg-6 col-md-12 pt-4">
                <span className="py-2 px-4">FROM DEC. 2020 UNTIL APR. 2021</span>
               <h6 className="mt-4">FRONT-END DEVELOPER TRAINEE</h6>
                 <p>
                     I was training at Information Technology Institute (ITI) for three months, Front-End Development track.
                 </p>
                </div>
-               <div className="col-lg-6 col-md-12">
+               <div className="col-lg-6 col-md-12 pt-4">
                <span className="py-2 px-4">FROM SEP. 2020 TO NOV. 2020</span>
               <h6 className="mt-4">ANGULAR FRONT-END DEVELOPER TRAINEE</h6>
                 <p>
                 I was trainee as Front-End Developer at CodeCaique Company for a month and a half.
                 </p>
                </div>
-               <div className="col-lg-6 col-md-12">
+               <div className="col-lg-6 col-md-12 pt-4">
                <span className="py-2 px-4">FROM 2016 TO 2020</span>
                 
                 <h6 className="mt-4">BACHELOR OF COMPUTER SCIENCE</h6>
